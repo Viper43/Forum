@@ -14,7 +14,7 @@ export class AppComponent {
   title = 'Forum';
   myObjArray = [{
     num: 1,
-    name: 'Tom'
+    name: 'Sage'
   },
   {
     num: 2,
