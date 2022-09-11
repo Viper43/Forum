@@ -1,0 +1,30 @@
+.card{
+    margin-top: 10px;
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(171, 208, 235);
+    background: linear-gradient(90deg, rgb(161, 195, 220) 0%, rgb(169, 149, 209) 100%);
+}
+.loginbutton{
+    width: 420px;
+    background: rgb(2, 121, 22);
+    background: linear-gradient(90deg, rgb(41, 196, 67) 0%, rgb(215, 233, 209) 100%);
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+}
+.registerbutton{
+    width: 420px;
+    background: rgb(223, 4, 4);
+    background: linear-gradient(90deg, rgb(223, 4, 4) 0%, rgb(242, 206, 206) 100%);
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+}
