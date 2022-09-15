@@ -3,8 +3,8 @@ const app = express();
 
 const port = 3080;
 
-const loginRegisterRoute = require('./api/controllers/routes/LoginRegister')
-app.use(loginRegisterRoute)
+const loginRegisterRoute = require('./api/controllers/routes/LoginRegisterRoute')
+app.use('/loginregister',loginRegisterRoute)
 
 function displayHello() {
     console.log("hello");
