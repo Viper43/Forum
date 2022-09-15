@@ -23,5 +23,5 @@ git fetch --> fetches newly created branches
 git pull --> pulls the latest changes of the current branch
 git stash --> to save the changes of the current branch
 git add . --> adds all changes to be committed
-git commit branch_name(optional) --> commits the added changes
+git commit -m "message" --> commits the added changes with the provided message
 git push --> pushes the committed changes to the branch  
