@@ -1,9 +1,17 @@
 exports.login = (req, res) => {
-    res.send("login called");
+    let data = {
+        "id": 1,
+        "name": "shreyan"
+    }
+    res.send(data);
 }
 
 exports.register = (req, res) => {
-    res.send("register called");
+    let data  = {
+        "id": 2,
+        "name": "Debdita"
+    }
+    res.send(data);
 }
 
 //module.exports = {login, register}

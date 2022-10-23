@@ -1,9 +1,15 @@
 const express = require("express");
 const app = express();
-
+const cors = require('cors')
 const port = 3080;
 
 const loginRegisterRoute = require('./api/controllers/routes/LoginRegisterRoute')
+
+app.use(cors({
+    origin: "*"
+}))
+
+
 app.use('/loginregister',loginRegisterRoute)
 
 function displayHello() {
