@@ -4,7 +4,6 @@ const router = express.Router()
 const cors = require('cors')
 
 const LoginRegister = require('../LoginRegisterController')
-
 //app.use(function (req, res, next) {
     //res.setHeader('Access-Control-Allow-Origin', 'http://localhost: 4200');
   //  res.setHeader('Access-Control-Allow-Origin', '*');
@@ -17,7 +16,8 @@ app.use(cors({
     origin: "*"
 }))
 
-router.get('/login', LoginRegister.login)
+router.get('/login', LoginRegister.Login)
 router.get('/register', LoginRegister.register)
+router.get('/connection', LoginRegister.databaseLoginTest)
 
 module.exports = router

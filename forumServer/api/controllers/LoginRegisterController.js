@@ -1,9 +1,8 @@
+const LoginRegisterService = require('../services/LoginRegisterService')
+
 exports.login = (req, res) => {
-    let data = {
-        "id": 1,
-        "name": "shreyan"
-    }
-    res.send(data);
+    const data = LoginRegisterService.login(req, res)
+    res.send(data)
 }
 
 exports.register = (req, res) => {
@@ -13,5 +12,3 @@ exports.register = (req, res) => {
     }
     res.send(data);
 }
-
-//module.exports = {login, register}
