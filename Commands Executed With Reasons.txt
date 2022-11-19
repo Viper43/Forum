@@ -1,36 +1,20 @@
 ============================================= GIT HUB COMMANDS ==================================================================
 
-1. git branch --> checks the current branch name
-2. git checkout branch_name --> changes the github branch to the mentioned branch name
-3. git fetch --> fetches newly created branches
-4. git pull --> pulls the latest changes of the current branch
-5. git stash --> to save the changes of the current branch
-6. git add . --> adds all changes to be committed
-7. git commit -m "message" --> commits the added changes with the provided message
-8. git push --> pushes the committed changes to the branch  
+git branch --> checks the current branch name
+git checkout branch_name --> changes the github branch to the mentioned branch name
+git fetch --> fetches newly created branches
+git pull --> pulls the latest changes of the current branch
+git stash --> to save the changes of the current branch
+git add . --> adds all changes to be committed
+git commit -m "message" --> commits the added changes with the provided message
+git push --> pushes the committed changes to the branch  
 
 =========================================================================================================================================================
 
 
 ======================================================== ANGULAR COMMANDS ===============================================================================
 
-1. ng serve -o --> To start the application
-2. ng g c loginregister--> To create a new component
-3. ng g service "path/filename" --> create a service for a perticular component
-
-============================================================================================================================================================================================================================================
-
-
-========================================================= SERVER APP COMMANDS ============================================================================
-
-npm init --> node package module initializer
-npm i express --> install express
-npm i -g nodemon --save-dev --> install nodemon in dev dependencies globally
-npm i cors --> install cors
-============================================================================================================================================================================================================================================
-
-
-========================================================= OTHER UTILITIES ============================================================================
+ng g c loginregister--> To create a new component
 
 Pasted <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
@@ -41,4 +25,17 @@ Pasted
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 in the body of index.html inside src for the bootstrap
 
+ng serve -o --> To start the application
+
 ============================================================================================================================================================================================================================================
+
+
+========================================================= SERVER APP COMMANDS ============================================================================
+
+npm init --> node package module initializer
+npm i express --> install express
+npm i -g nodemon --save-dev --> install nodemon in dev dependencies globally
+nodemon run start --> runs the server
+npm i mongodb --> installs mongo db
+npm i mongoose --> installations requirred for mongo db
+

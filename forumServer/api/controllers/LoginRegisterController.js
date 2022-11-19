@@ -1,9 +1,11 @@
-exports.login = (req, res) => {
-    let data = {
-        "id": 1,
-        "name": "shreyan"
-    }
-    res.send(data);
+const { json } = require('express')
+const LoginRegisterService = require('../services/LoginRegisterService')
+
+exports.Login = (req, res) => {
+    console.log('controller called')
+    serviceData = LoginRegisterService.Login(req, res)
+    const data = JSON.stringify( serviceData.data)
+    res.send(data)
 }
 
 exports.register = (req, res) => {
@@ -13,5 +15,3 @@ exports.register = (req, res) => {
     }
     res.send(data);
 }
-
-//module.exports = {login, register}

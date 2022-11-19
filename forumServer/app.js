@@ -1,25 +1,20 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const app = express();
-const cors = require('cors')
-const port = 3080;
-
 const loginRegisterRoute = require('./api/controllers/routes/LoginRegisterRoute')
+const port = 3080;
+const url = 'mongodb://127.0.0.1:27017/Forum'
 
-app.use(cors({
-    origin: "*"
-}))
-
+mongoose.connect(url,{ useNewUrlParser : true , useUnifiedTopology : true })
+.then( () => {
+    console.log("Hey! Connection Successfull...")})        
+.catch((err) => 
+    console.log(err));
 
 app.use('/loginregister',loginRegisterRoute)
-
-function displayHello() {
-    console.log("hello");
-    console.log("how are you");
-}
-
 app.listen( port, function() {
     console.log("server is ready at port " + port);
 });
 
 
-displayHello();
+
