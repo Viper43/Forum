@@ -22,6 +22,26 @@ exports.Register = async (req, res) => {
     return data;
 }
 
+exports.Register = async(req,res) => {
+
+    const Exist = await LoginRegisterRepository.UserAlreadyExists(req, res)
+    if(isEmpty(Exist)) {
+        const count = await LoginRegisterRepository.UserCount(req, res)
+        
+        const obj = {
+            _id:count+1, 
+            emailId:req.body.emailId, 
+            password:req.body.password
+        };
+        
+        const repositoryData = await LoginRegisterRepository.Register(obj, res)  
+        return true;
+    }  
+    else{
+        return false;
+    }  
+}
+
 IsEmpty = (data) => {
     return data.count == 0 && data == null
 }
