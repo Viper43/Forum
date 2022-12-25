@@ -15,9 +15,9 @@ export class LoginRegisterService {
     return this.http.get(this.loginUrl);
   }
 
-  register() {
+  // register() {
 
-    return this.http.get(this.registerUrl);
-  }
+  //   return this.http.post(this.registerUrl);
+  // }
 
 }

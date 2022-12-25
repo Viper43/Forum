@@ -7,7 +7,7 @@ import { LoginRegisterService } from '../../services/login-register.service';
   styleUrls: ['./loginregister.component.css']
 })
 export class LoginregisterComponent implements OnInit {
-  apiLoginData: any;
+  apiLoginData: string = "";
   apiRegisterData: any;
 
   constructor(private loginRegister: LoginRegisterService) { }
@@ -15,12 +15,14 @@ export class LoginregisterComponent implements OnInit {
   ngOnInit(): void {
     this.loginRegister.login().subscribe((data) => {
       //console.warn(this.apiData);
-      this.apiLoginData=data
+      console.log("called")
+      console.log(JSON.stringify(data))
+      this.apiLoginData = JSON.stringify(data);
     });
 
-    this.loginRegister.register().subscribe((data) => {
-      //console.warn(this.apiData);
-      this.apiRegisterData=data
-    });
+    // this.loginRegister.register().subscribe((data) => {
+    //   //console.warn(this.apiData);
+    //   this.apiRegisterData=data
+    // });
   }
 }

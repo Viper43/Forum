@@ -1,17 +1,13 @@
-const { json } = require('express')
 const LoginRegisterService = require('../services/LoginRegisterService')
 
-exports.Login = (req, res) => {
-    console.log('controller called')
-    serviceData = LoginRegisterService.Login(req, res)
-    const data = JSON.stringify( serviceData.data)
-    res.send(data)
+exports.Login = async (req, res) => {
+    
+    const serviceData = await LoginRegisterService.Login(req, res)
+    res.send(serviceData)
 }
 
-exports.register = (req, res) => {
-    let data  = {
-        "id": 2,
-        "name": "Debdita"
-    }
+exports.register = async (req, res) => {
+    
+    let data  = await LoginRegisterService.Register(req, res);
     res.send(data);
 }

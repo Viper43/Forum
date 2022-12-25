@@ -2,8 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const loginRegisterRoute = require('./api/controllers/routes/LoginRegisterRoute')
+const cors = require('cors')
 const port = 3080;
 const url = 'mongodb://127.0.0.1:27017/Forum'
+
+app.use(cors({
+    origin: "*"
+}))
 
 mongoose.connect(url,{ useNewUrlParser : true , useUnifiedTopology : true })
 .then( () => {

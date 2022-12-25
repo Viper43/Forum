@@ -1,4 +1,4 @@
-const { Schema, default: mongoose } = require("mongoose");
+const { Schema, mongoose } = require("mongoose");
 
 const UserAccessDetailsSchema = new Schema({
     _id: {
@@ -15,7 +15,7 @@ const UserAccessDetailsSchema = new Schema({
     },
     phoneNo: {
         type: Number,
-        required: true
+        //required: true
     }
 })
 
