@@ -3,7 +3,7 @@ const { Schema, default: mongoose } = require("mongoose");
 const UserAccessDetailsSchema = new Schema({
     _id: {
         type: Number,
-        required: true
+        required: true        
     },
     emailId: {
         type: String,
@@ -14,9 +14,14 @@ const UserAccessDetailsSchema = new Schema({
         required: true
     },
     phoneNo: {
-        type: Number,
-        required: true
+        type: Number       
     }
+// },
+// {
+//     versionKey: false // You should be aware of the outcome after set to false
 })
 
+
 module.exports = mongoose.model('UserAccessDetails', UserAccessDetailsSchema)
+
+
